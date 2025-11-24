@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name=”description” content=”自称日本最北の室内楽団「問寒別室内楽団」の公式HPです”>
+    <title>問寒別室内楽団</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container p-0 h-100">
+        <header>
+            <a href="index.html">
+                <div id="headerIcon" class="mx-auto"></div>
+            </a>
+        </header>
+
+        <img id="topImg" src="img/header.jpg">
+
+        <!-- メニュー部分 -->
+        <div id="menuIcon"></div>
+        <div id="menuOverlay">
+            <div id="menuContent">
+                <h3>問寒別室内楽団</h3>
+                <ul id="menuList">
+                    <li><a href="index.html#greeding">ご挨拶</a></li>
+                    <li><a href="index.html#introduction">団体紹介</a></li>
+                    <li><a href="index.html#sns">SNS</a></li>
+                    <li><a href="index.html#links">関連団体</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- コンテンツ -->
+        <div class="contents mx-auto">
+            <div class="pb-2" id="greeding">
+                <h1 class="fs-1 pb-2">日本最北の室内楽団</h1>
+                <p>問寒別室内楽団と申します。<br>
+                    10代から20代の若き団員で構成された日本最北の室内楽団です。<br>
+                    人口170人の限界集落"幌延町問寒別"。<br>
+                    弦楽に無縁なこの地域で少しでも楽しさを伝えたい。そんな思いで活動しております。
+                </p>
+            </div>
+
+            <div id ="gallery" class="m-3">
+                <div><h2>ギャラリー</h2></div>
+                <div class="scroll-container p-2">
+                    <div class="d-flex">
+                        <img src="img/gallary/1.jpg" class="scroll-item">
+                        <img src="img/gallary/2.jpg" class="scroll-item">
+                        <img src="img/gallary/3.jpg" class="scroll-item">
+                        <img src="img/gallary/4.jpg" class="scroll-item">
+                        <img src="img/gallary/5.jpg" class="scroll-item">
+                    </div>
+                </div>
+            </div>
+
+            <div id ="introduction" class="m-3">
+                <h3 class="text-center">団体紹介</h3>
+                <p>
+                    20代の若き奏者を中心として構成される、自称「日本最北の室内楽団」。<br>
+                    幌延町問寒別のゲストハウス「ウタラといかん」および、同施設の宿泊者を中心に、弦楽合奏に縁のない地域にその魅力を伝えることを目的として、2024年6月1日に発足した。<br>
+                    楽団員の多くが遠隔地に在住していることから、演奏機会に応じ、参加可能なメンバーが都度集い活動を行っている。<br>
+                    2025年4月、幌延町文化協会に加盟。
+                </p>
+                <p>過去の公演情報は<a href="concert.html">こちら</a></p>
+            </div>
+
+            <div id = "sns" class="m-3">
+                <h3 class="text-center">SNS</h3>
+                <p>
+                    公式Instagram：<a href="https://www.instagram.com/orchestra_toikanbetsu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@orchestra_toikanbetsu</a><br>
+                    公式X（Twitter）：<a href="https://x.com/orchestra_utara">@orchestra_utara</a><br>
+                    代表（阿部由裕）個人X：<a href="https://x.com/abescl">@abescl</a></p>
+            </div>
+
+            <div id ="links" class="m-3">
+                <h3 class="text-center">関連団体</h3>
+                <p><a href="https://utaratoikan.studio.site/">日本一しょぼいゲストハウス　ウタラといかん</a></p>
+            </div>
+
+            <div id="advertisement" class=p-2>
+                <img src="img/advertisement/1.gif">
+                <img src="img/advertisement/2.jpg">
+            </div>
+        </div>
+
+        <footer class="p-2">
+            <p class="text-center"><small>Copyright Ⓒ 2025 Orchestra Toikanbetsu. All rights reserved.</small></p>
+        </footer>
+ 
+    </div>
+    
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        menuIcon.onclick = function(){
+            menuIcon.classList.toggle('open'); 
+            menuOverlay.classList.toggle('active');  
+        };
+
+        menuOverlay.addEventListener('click', function (e) {
+            if (e.target === menuOverlay) {
+                menuOverlay.classList.remove('active');
+                menuIcon.classList.remove('open'); 
+            }
+        });
+    </script>
+</body>
+</html>
